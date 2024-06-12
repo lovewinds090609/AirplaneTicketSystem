@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboEndStation = new System.Windows.Forms.ComboBox();
             this.cboStartStation = new System.Windows.Forms.ComboBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cboEndStation = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.dgvTickets = new System.Windows.Forms.DataGridView();
             this.planeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.planeNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +69,58 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查詢條件";
             // 
+            // dtpDate
+            // 
+            this.dtpDate.Location = new System.Drawing.Point(430, 35);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(200, 22);
+            this.dtpDate.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(364, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "出發時間";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Location = new System.Drawing.Point(183, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "抵達";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(16, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "出發";
+            // 
+            // cboEndStation
+            // 
+            this.cboEndStation.FormattingEnabled = true;
+            this.cboEndStation.Items.AddRange(new object[] {
+            "岡山",
+            "東京",
+            "首爾",
+            "大阪",
+            "廈門",
+            "京都"});
+            this.cboEndStation.Location = new System.Drawing.Point(223, 35);
+            this.cboEndStation.Name = "cboEndStation";
+            this.cboEndStation.Size = new System.Drawing.Size(121, 20);
+            this.cboEndStation.TabIndex = 1;
+            // 
             // cboStartStation
             // 
             this.cboStartStation.FormattingEnabled = true;
@@ -91,58 +143,6 @@
             this.buttonSearch.Text = "查詢";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(16, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "出發";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(183, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "抵達";
-            // 
-            // cboEndStation
-            // 
-            this.cboEndStation.FormattingEnabled = true;
-            this.cboEndStation.Items.AddRange(new object[] {
-            "岡山",
-            "東京",
-            "首爾",
-            "大阪",
-            "廈門",
-            "京都"});
-            this.cboEndStation.Location = new System.Drawing.Point(223, 35);
-            this.cboEndStation.Name = "cboEndStation";
-            this.cboEndStation.Size = new System.Drawing.Size(121, 20);
-            this.cboEndStation.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(364, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "出發時間";
-            // 
-            // dtpDate
-            // 
-            this.dtpDate.Location = new System.Drawing.Point(430, 35);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(200, 22);
-            this.dtpDate.TabIndex = 3;
             // 
             // dgvTickets
             // 
@@ -237,6 +237,7 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "售票系統";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
