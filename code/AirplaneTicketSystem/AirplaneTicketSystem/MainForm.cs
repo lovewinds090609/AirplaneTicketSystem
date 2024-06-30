@@ -46,8 +46,8 @@ namespace AirplaneTicketSystem
 
         private void tsmiBuy_Click(object sender, EventArgs e)
         {
-            DataGridViewRow row= this.dgvTickets.SelectedRows[0];//選中第一行
-            string planeId=row.Cells["planeId"].Value.ToString();
+            DataGridViewRow row = this.dgvTickets.SelectedRows[0];//選中第一行
+            string planeId = row.Cells["planeId"].Value.ToString();
             //MessageBox.Show(planeId);
             OrderForm orderForm = new OrderForm(row);
             orderForm.Show();

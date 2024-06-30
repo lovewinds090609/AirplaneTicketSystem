@@ -30,25 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelPlaneNo = new System.Windows.Forms.Label();
+            this.labelEndStation = new System.Windows.Forms.Label();
             this.labelStartStation = new System.Windows.Forms.Label();
             this.labelDepartureTime = new System.Windows.Forms.Label();
-            this.labelEndStation = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelPlaneNo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textCountry = new System.Windows.Forms.TextBox();
+            this.textId = new System.Windows.Forms.TextBox();
+            this.textPhone = new System.Windows.Forms.TextBox();
+            this.textName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnBuy = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -70,32 +70,51 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "機票訊息";
             // 
-            // groupBox2
+            // labelEndStation
             // 
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(12, 145);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(421, 151);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "乘客訊息";
+            this.labelEndStation.AutoSize = true;
+            this.labelEndStation.Location = new System.Drawing.Point(274, 79);
+            this.labelEndStation.Name = "labelEndStation";
+            this.labelEndStation.Size = new System.Drawing.Size(33, 12);
+            this.labelEndStation.TabIndex = 1;
+            this.labelEndStation.Text = "label5";
             // 
-            // label1
+            // labelStartStation
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label1.Location = new System.Drawing.Point(205, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 14);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "出發時間";
+            this.labelStartStation.AutoSize = true;
+            this.labelStartStation.Location = new System.Drawing.Point(73, 79);
+            this.labelStartStation.Name = "labelStartStation";
+            this.labelStartStation.Size = new System.Drawing.Size(33, 12);
+            this.labelStartStation.TabIndex = 1;
+            this.labelStartStation.Text = "label5";
+            // 
+            // labelDepartureTime
+            // 
+            this.labelDepartureTime.AutoSize = true;
+            this.labelDepartureTime.Location = new System.Drawing.Point(274, 34);
+            this.labelDepartureTime.Name = "labelDepartureTime";
+            this.labelDepartureTime.Size = new System.Drawing.Size(33, 12);
+            this.labelDepartureTime.TabIndex = 1;
+            this.labelDepartureTime.Text = "label5";
+            // 
+            // labelPlaneNo
+            // 
+            this.labelPlaneNo.AutoSize = true;
+            this.labelPlaneNo.Location = new System.Drawing.Point(73, 34);
+            this.labelPlaneNo.Name = "labelPlaneNo";
+            this.labelPlaneNo.Size = new System.Drawing.Size(33, 12);
+            this.labelPlaneNo.TabIndex = 1;
+            this.labelPlaneNo.Text = "label5";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label4.Location = new System.Drawing.Point(18, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 14);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "出發地";
             // 
             // label2
             // 
@@ -117,61 +136,70 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "班次";
             // 
-            // label4
+            // label1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label4.Location = new System.Drawing.Point(18, 77);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 14);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "出發地";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label1.Location = new System.Drawing.Point(205, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 14);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "出發時間";
             // 
-            // labelPlaneNo
+            // groupBox2
             // 
-            this.labelPlaneNo.AutoSize = true;
-            this.labelPlaneNo.Location = new System.Drawing.Point(73, 34);
-            this.labelPlaneNo.Name = "labelPlaneNo";
-            this.labelPlaneNo.Size = new System.Drawing.Size(33, 12);
-            this.labelPlaneNo.TabIndex = 1;
-            this.labelPlaneNo.Text = "label5";
+            this.groupBox2.Controls.Add(this.textCountry);
+            this.groupBox2.Controls.Add(this.textId);
+            this.groupBox2.Controls.Add(this.textPhone);
+            this.groupBox2.Controls.Add(this.textName);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Location = new System.Drawing.Point(12, 145);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(421, 151);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "乘客訊息";
             // 
-            // labelStartStation
+            // textCountry
             // 
-            this.labelStartStation.AutoSize = true;
-            this.labelStartStation.Location = new System.Drawing.Point(73, 79);
-            this.labelStartStation.Name = "labelStartStation";
-            this.labelStartStation.Size = new System.Drawing.Size(33, 12);
-            this.labelStartStation.TabIndex = 1;
-            this.labelStartStation.Text = "label5";
+            this.textCountry.Location = new System.Drawing.Point(246, 96);
+            this.textCountry.Name = "textCountry";
+            this.textCountry.Size = new System.Drawing.Size(140, 22);
+            this.textCountry.TabIndex = 1;
             // 
-            // labelDepartureTime
+            // textId
             // 
-            this.labelDepartureTime.AutoSize = true;
-            this.labelDepartureTime.Location = new System.Drawing.Point(274, 34);
-            this.labelDepartureTime.Name = "labelDepartureTime";
-            this.labelDepartureTime.Size = new System.Drawing.Size(33, 12);
-            this.labelDepartureTime.TabIndex = 1;
-            this.labelDepartureTime.Text = "label5";
+            this.textId.Location = new System.Drawing.Point(59, 96);
+            this.textId.Name = "textId";
+            this.textId.Size = new System.Drawing.Size(140, 22);
+            this.textId.TabIndex = 1;
             // 
-            // labelEndStation
+            // textPhone
             // 
-            this.labelEndStation.AutoSize = true;
-            this.labelEndStation.Location = new System.Drawing.Point(274, 79);
-            this.labelEndStation.Name = "labelEndStation";
-            this.labelEndStation.Size = new System.Drawing.Size(33, 12);
-            this.labelEndStation.TabIndex = 1;
-            this.labelEndStation.Text = "label5";
+            this.textPhone.Location = new System.Drawing.Point(246, 32);
+            this.textPhone.Name = "textPhone";
+            this.textPhone.Size = new System.Drawing.Size(140, 22);
+            this.textPhone.TabIndex = 1;
             // 
-            // label5
+            // textName
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label5.Location = new System.Drawing.Point(18, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 14);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "姓名";
+            this.textName.Location = new System.Drawing.Point(59, 32);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(140, 22);
+            this.textName.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label8.Location = new System.Drawing.Point(205, 104);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 14);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "國籍";
             // 
             // label6
             // 
@@ -193,75 +221,49 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "身分證";
             // 
-            // label8
+            // label5
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label8.Location = new System.Drawing.Point(205, 104);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 14);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "國籍";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label5.Location = new System.Drawing.Point(18, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 14);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "姓名";
             // 
-            // textBox1
+            // btnBuy
             // 
-            this.textBox1.Location = new System.Drawing.Point(59, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 22);
-            this.textBox1.TabIndex = 1;
+            this.btnBuy.Location = new System.Drawing.Point(71, 316);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(93, 37);
+            this.btnBuy.TabIndex = 1;
+            this.btnBuy.Text = "購票";
+            this.btnBuy.UseVisualStyleBackColor = true;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
-            // textBox2
+            // btnClose
             // 
-            this.textBox2.Location = new System.Drawing.Point(59, 96);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 22);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(246, 32);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(140, 22);
-            this.textBox3.TabIndex = 1;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(246, 96);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(140, 22);
-            this.textBox4.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(71, 316);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "購票";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(258, 316);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 37);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "關閉";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnClose.Location = new System.Drawing.Point(258, 316);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(93, 37);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "關閉";
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 365);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnBuy);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "購票視窗";
+            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -282,15 +284,15 @@
         private System.Windows.Forms.Label labelEndStation;
         private System.Windows.Forms.Label labelStartStation;
         private System.Windows.Forms.Label labelDepartureTime;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textCountry;
+        private System.Windows.Forms.TextBox textId;
+        private System.Windows.Forms.TextBox textPhone;
+        private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBuy;
+        private System.Windows.Forms.Button btnClose;
     }
 }
