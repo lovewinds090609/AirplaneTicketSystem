@@ -26,6 +26,7 @@ namespace AirplaneTicketSystem
             InitializeComponent();
             this.Row = row; //擴大變數範圍
         }
+        public event Action updateTickets;
         /// <summary>
         /// 購買event
         /// </summary>
@@ -46,19 +47,22 @@ namespace AirplaneTicketSystem
             string id = this.textId.Text.Trim();
             string country = this.textCountry.Text.Trim();
             string planeNo = Row.Cells["planeNo"].Value.ToString();
+            string planeId = Row.Cells["planeId"].Value.ToString();
             //MessageBox.Show(name);
-            string sql = @"insert into Record(name,phone,id,country,planeNo) values(@name,@phone,@id,@country,@planeNo)";
+            string sql = @"insert into Record(name,phone,id,country,planeNo,planeId) values(@name,@phone,@id,@country,@planeNo,@planeId)";
             SqlParameter[] paras = new SqlParameter[] {
                 new SqlParameter("@name",name),
                 new SqlParameter("@phone",phone),
                 new SqlParameter("@id",id),
                 new SqlParameter("@country",country),
-                new SqlParameter("@planeNo",planeNo)
+                new SqlParameter("@planeNo",planeNo),
+                new SqlParameter("@planeId",planeId)
             };
             int result = DBhelper.ExecuteNonQuery(sql,paras);
             if (result > 0)
             {
                 MessageBox.Show("購買成功");
+                updateTickets();
                 this.Close();
             }
             else

@@ -50,9 +50,30 @@ namespace AirplaneTicketSystem
             string planeId = row.Cells["planeId"].Value.ToString();
             //MessageBox.Show(planeId);
             OrderForm orderForm = new OrderForm(row);
+            orderForm.updateTickets += updateTickets;
             orderForm.Show();
         }
-
+        private void updateTickets()
+        {
+            string start = this.cboStartStation.Text;
+            string end = this.cboEndStation.Text;
+            string date = this.dtpDate.Value.ToString("yyyy/MM/dd");
+            string sql = $"select planeId, planeNo, departureTime, startStation, endStation, price, tickets from Tickets where convert(varchar,departureTime,111) = convert(varchar,'{date}',111)";
+            if (start != "")
+            {
+                sql += $"and startStation = '{start}'";
+            }
+            if (end != "")
+            {
+                sql += $"and endStation = '{end}'";
+            }
+            /*SqlParameter[] paras = new SqlParameter[] {
+                new SqlParameter("@date",date),
+                new SqlParameter("@startStation",start),
+                new SqlParameter("@endStation",end)
+            };*/
+            this.dgvTickets.DataSource = DBhelper.GetDataTable(sql);
+        }
         /// <summary>
         /// 滑鼠點擊event(左/右)
         /// </summary>
